@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат оценки</title>
+    <!-- Подключение пользовательских стилей -->
+    <link rel="stylesheet" href="{% static 'reviews/css/styles.css' %}">
+    <!-- Bootstrap JS и зависимости -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'review' %}">Movie Review Service</a>
+    </nav>
+
+    <div class="container">
+        <h1>Результат оценки отзыва</h1>
+        <div class="result-card">
+            <p><strong>Ваш отзыв:</strong></p>
+            <p>{{ review.text }}</p>
+            <hr>
+            <p><strong>Предсказанный рейтинг:</strong> {{ review.predicted_rating }} из 10</p>
+            <p><strong>Статус отзыва:</strong> {{ review.predicted_sentiment }}</p>
+            <a href="{% url 'review' %}" class="btn btn-primary">Вернуться назад</a>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Movie Review Service</p>
+    </div>
+</body>
+</html>
