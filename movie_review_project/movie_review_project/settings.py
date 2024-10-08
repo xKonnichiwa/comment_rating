@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['augomgtu.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 # Секретный ключ
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'default-secret-key')
