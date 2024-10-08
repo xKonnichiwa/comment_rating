@@ -9,7 +9,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 model_path = os.path.join(BASE_DIR, 'models')
 
-sentiment_model = joblib.load(os.path.join(model_path, 'voting_classifier.pkl'))
+sentiment_model = joblib.load(os.path.join(model_path, 'lgbm_sentiment_classifier.pkl'))
 rating_model = joblib.load(os.path.join(model_path, 'rf_rating_regressor.pkl'))
 vectorizer = joblib.load(os.path.join(model_path, 'tfidf_vectorizer.pkl'))
 
